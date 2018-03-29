@@ -19,7 +19,7 @@ module.exports = (regIds, data, settings) => {
             badge: data.badge,
             topic: data.topic,
             category: data.category || data.clickAction,
-            contentAvailable: data.contentAvailable,
+            contentAvailable: data.contentAvailable ? 1 : data.contentAvailable,
             mdm: data.mdm,
             urlArgs: data.urlArgs,
             truncateAtWordEnd: data.truncateAtWordEnd,
