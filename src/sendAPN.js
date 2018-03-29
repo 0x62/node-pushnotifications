@@ -76,6 +76,7 @@ module.exports = (regIds, data, settings) => {
                     });
                 }
             });
+            connection.shutdown();
             return resumed;
         });
 };
