@@ -24,6 +24,7 @@ module.exports = (regIds, data, settings) => {
             urlArgs: data.urlArgs,
             truncateAtWordEnd: data.truncateAtWordEnd,
             collapseId: data.collapseKey,
+            threadId: data.threadId,
             mutableContent: data.mutableContent || 0,
             sound: data.sound || 'ping.aiff',
             alert: data.alert || {
