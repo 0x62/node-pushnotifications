@@ -48,7 +48,7 @@ const sendChunk = (GCMSender, registrationTokens, message, retries) => new Promi
     });
 });
 
-module.exports = (regIds, data, settings) => {
+const sendGCM = (regIds, data, settings) => {
     const opts = Object.assign({}, settings.gcm);
     const id = opts.id;
     delete opts.id;
@@ -134,3 +134,5 @@ module.exports = (regIds, data, settings) => {
             return resumed;
         });
 };
+
+module.exports = sendGCM;

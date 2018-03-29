@@ -1,5 +1,4 @@
 const apn = require('apn');
-
 const method = 'apn';
 
 module.exports = (regIds, data, settings) => {
@@ -41,7 +40,6 @@ module.exports = (regIds, data, settings) => {
     }
 
     const message = new apn.Notification(notification);
-
     const connection = new apn.Provider(settings.apn);
 
     return connection.send(message, regIds)
